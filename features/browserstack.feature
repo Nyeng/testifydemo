@@ -1,6 +1,6 @@
 #language: no
 
-Egenskap: Google's Search Functionality
+Egenskap: Hvordan skalerer nettsiden til Testify
 
   Bakgrunn:
     Gitt at vi går mot testsiden "http://www.testify.no/"
