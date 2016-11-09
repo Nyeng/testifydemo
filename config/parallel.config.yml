@@ -1,0 +1,17 @@
+server: "hub-cloud.browserstack.com"
+user: "vegardwright1"
+key: "9rq65RGLe4vFw7qqUwh7"
+
+common_caps:
+  "build": "capybara-browserstack"
+  "browserstack.debug": true
+
+browser_caps:
+  -
+    "browser": "internet explorer"
+  -
+    "browser": "firefox"
+  -
+    "browser": "chrome"
+  -
+    "browser": "safari"
