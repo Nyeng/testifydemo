@@ -1,7 +1,7 @@
-require "net/http"
-require "uri"
-require 'typhoeus'
-include PageObjects
+#require "net/http"
+#require "uri"
+#require 'typhoeus'
+#include PageObjects
 
 module PageObjects
   class ClientLogin
