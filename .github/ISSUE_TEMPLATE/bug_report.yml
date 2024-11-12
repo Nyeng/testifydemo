@@ -1,8 +1,7 @@
 name: API Bug Report
 description: Report an issue related to the API.
-title: "[Bug]: "
-labels: ["bug"]
-projects: ["Altinn/75"]
+title: " "
+labels: ["bug", "type: bug", "triage"]
 assignees:
   - Nyeng
 body:
