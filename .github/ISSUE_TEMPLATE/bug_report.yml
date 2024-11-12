@@ -15,15 +15,14 @@ body:
     id: reproduction-steps
     attributes:
       label: Steps to Reproduce
-      description: Provide info on how to reproduce the issue
+      description: Provide information on how to reproduce the issue, including API endpoint, request method, and payload.
       placeholder: |
-        1. Endpoint: POST $"/authentication/api/v1/systemregister/vendor/{SystemId}"
+        1. Endpoint: POST /authentication/api/v1/systemregister/vendor/{SystemId}
         2. Request Method: POST
         3. Request Body:
            {
+             "key": "value"
            }
-    validations:
-      required: false
 
   - type: textarea
     id: expected-behavior
@@ -31,17 +30,13 @@ body:
       label: Expected Behavior
       description: What did you expect to happen?
       placeholder: ex. The API should return a 201 Created status with user details.
-    validations:
-      required: false
 
   - type: textarea
     id: actual-behavior
     attributes:
       label: Actual Behavior
-      description: What actually happened? Include the response status code and body if applicable.
-      placeholder: eg. Received 500 Internal Server Error with response body {}
-    validations:
-      required: false
+      description: What actually happened? Include the response status code and response body if applicable.
+      placeholder: ex. Received 500 Internal Server Error with response body {}
 
   - type: dropdown
     id: priority
@@ -54,9 +49,7 @@ body:
         - P2 (Medium): Bug affects functionality but has a workaround
         - P3 (Low): Minor issue, does not impact core functionality
         - P4 (Trivial): Cosmetic or non-impactful bug
-      default: P2 (Medium)
-    validations:
-      required: false
+      default: 2  # Index of the default option (P2 - Medium)
 
   - type: textarea
     id: logs
