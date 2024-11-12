@@ -1,0 +1,75 @@
+name: API Bug Report
+description: Report an issue related to the API.
+title: "[Bug]: "
+labels: ["bug"]
+projects: ["Altinn/75"]
+assignees:
+  - Nyeng
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide as much detail as possible to help us diagnose and resolve the issue.
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide info on how to reproduce the issue
+      placeholder: |
+        1. Endpoint: POST $"/authentication/api/v1/systemregister/vendor/{SystemId}"
+        2. Request Method: POST
+        3. Request Body:
+           {
+           }
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: ex. The API should return a 201 Created status with user details.
+    validations:
+      required: false
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? Include the response status code and body if applicable.
+      placeholder: eg. Received 500 Internal Server Error with response body {}
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: Indicate the severity of the issue.
+      options:
+        - P0 (Critical): Production API is down, blocking all users
+        - P1 (High): Severe issue affecting multiple users
+        - P2 (Medium): Bug affects functionality but has a workaround
+        - P3 (Low): Minor issue, does not impact core functionality
+        - P4 (Trivial): Cosmetic or non-impactful bug
+      default: P2 (Medium)
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and Stack Traces
+      description: Provide any relevant server logs, error messages, or stack traces.
+      render: shell
+      placeholder: |
+        2024-11-12T10:15:45Z ERROR [SystemUserService]: NullReferenceException at ValidateSystem
+
+  - type: input
+    id: environment
+    attributes:
+      label: API Environment
+      description: Specify the environment where the issue was encountered (e.g., AT22, TT02, PROD).
+      placeholder: ex. Production
