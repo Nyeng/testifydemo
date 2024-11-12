@@ -1,8 +1,3 @@
-contact_links:
-  - name: Rapportér en API-feil
-    url: /issues/new?template=bug_report.yml
-    about: Bruk denne knappen for å rapportere en feil relatert til API-et.
-
 name: Bugrapport
 description: Legg inn bug-rapport
 labels: ["bug", "type: bug"]
@@ -18,11 +13,11 @@ body:
     id: reproduksjonssteg_generell_info
     attributes:
       label: Reproduksjonssteg og Generell Info
-      description: Oppgi generell informasjon og hvordan problemet kan gjenskapes, inkludert API-endepunkt, forespørselsmetode og payload.
+      description: Oppgi generell informasjon og hvordan problemet kan gjenskapes
       placeholder: |
         1. Endepunkt: POST /authentication/api/v1/systemregister/vendor/{SystemId}
-        2. Forespørselsmetode: POST
-        3. Forespørselskropp (Request Body):
+        2. Request method: POST
+        3. Request Body:
            {
              "key": "value"
            }
@@ -53,6 +48,6 @@ body:
   - type: input
     id: miljo
     attributes:
-      label: API Miljø
+      label: Testmiljø
       description: Spesifiser hvilket miljø problemet ble oppdaget i (f.eks., AT22, TT02, PROD).
-      placeholder: f.eks. Produksjon
+      placeholder: AT22
