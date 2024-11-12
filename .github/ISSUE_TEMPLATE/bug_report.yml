@@ -1,6 +1,6 @@
 name: API Bug Report
 description: Report an issue related to the API.
-labels: ["bug", "type: bug", "triage"]
+labels: ["bug", "type: bug"]
 assignees:
   - Nyeng
 body:
@@ -35,19 +35,6 @@ body:
       label: Actual Behavior
       description: What actually happened? Include the response status code and response body if applicable.
       placeholder: ex. Received 500 Internal Server Error with response body {}
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority Level
-      description: Indicate the severity of the issue.
-      options:
-        - P0 (Critical): Production API is down, blocking all users
-        - P1 (High): Severe issue affecting multiple users
-        - P2 (Medium): Bug affects functionality but has a workaround
-        - P3 (Low): Minor issue, does not impact core functionality
-        - P4 (Trivial): Cosmetic or non-impactful bug
-      default: 2  # Index of the default option (P2 - Medium)
 
   - type: textarea
     id: logs
