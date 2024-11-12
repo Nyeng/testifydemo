@@ -27,7 +27,7 @@ body:
     attributes:
       label: Expected Behavior
       description: What did you expect to happen?
-      placeholder: ex. The API should return a 201 Created status with user details.
+      placeholder: ex. The API should return a 201 Created status with system details.
 
   - type: textarea
     id: actual-behavior
