@@ -1,6 +1,6 @@
 contact_links:
   - name: Rapportér en API-feil
-    url: /issues/new?template=bugrapport.yml
+    url: /issues/new?template=bug_report.yml
     about: Bruk denne knappen for å rapportere en feil relatert til API-et.
 
 name: Bugrapport
