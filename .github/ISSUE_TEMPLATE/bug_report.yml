@@ -1,3 +1,8 @@
+contact_links:
+  - name: Rapportér en API-feil
+    url: /issues/new?template=bugrapport.yml
+    about: Bruk denne knappen for å rapportere en feil relatert til API-et.
+
 name: Bugrapport
 description: Legg inn bug-rapport
 labels: ["bug", "type: bug"]
