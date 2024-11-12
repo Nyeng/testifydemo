@@ -1,5 +1,5 @@
-name: Bug Report
-description: Report an issue related to the API.
+name: Bugrapport
+description: Legg inn bug-rapport
 labels: ["bug", "type: bug"]
 assignees:
   - Nyeng
@@ -7,47 +7,47 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for reporting a bug! Please provide as much detail as possible to help us diagnose and resolve the issue.
+        Takk for at du rapporterer en feil! Vennligst oppgi så mye informasjon som mulig for å hjelpe oss med å løse problemet.
 
   - type: textarea
-    id: reproduction-steps
+    id: reproduksjonssteg-og-generell-info
     attributes:
-      label: Steps to Reproduce
-      description: Provide information on how to reproduce the issue, including API endpoint, request method, and payload.
+      label: Reproduksjonssteg og Generell Info
+      description: Oppgi generell informasjon og hvordan problemet kan gjenskapes, inkludert API-endepunkt, forespørselsmetode og payload.
       placeholder: |
-        1. Endpoint: POST /authentication/api/v1/systemregister/vendor/{SystemId}
-        2. Request Method: POST
-        3. Request Body:
+        1. Endepunkt: POST /authentication/api/v1/systemregister/vendor/{SystemId}
+        2. Forespørselsmetode: POST
+        3. Forespørselskropp (Request Body):
            {
              "key": "value"
            }
 
   - type: textarea
-    id: expected-behavior
+    id: forventet-adferd
     attributes:
-      label: Expected Behavior
-      description: What did you expect to happen?
-      placeholder: ex. The API should return a 201 Created status with system details.
+      label: Forventet oppførsel
+      description: Hva forventet du skulle skje?
+      placeholder: f.eks. API-et skal returnere en 201 Created status med systemdetaljer.
 
   - type: textarea
-    id: actual-behavior
+    id: faktisk-oppfoersel
     attributes:
-      label: Actual Behavior
-      description: What actually happened? Include the response status code and response body if applicable.
-      placeholder: ex. Received 500 Internal Server Error with response body {}
+      label: Faktisk oppførsel
+      description: Hva skjedde? Inkluder responsstatuskode og responskropp hvis relevant.
+      placeholder: f.eks. Mottok 500 Internal Server Error med responskropp {}
 
   - type: textarea
-    id: logs
+    id: logger
     attributes:
-      label: Logs and Stack Traces
-      description: Provide any relevant server logs, error messages, or stack traces.
+      label: Logger og/eller direkte lenke til Application Insights
+      description: Oppgi eventuelle relevante serverlogger, feilmeldinger eller stack traces.
       render: shell
       placeholder: |
-        2024-11-12T10:15:45Z ERROR [SystemUserService]: NullReferenceException at ValidateSystem
+        2024-11-12T10:15:45Z ERROR [SystemUserService]: NullReferenceException ved ValidateSystem
 
   - type: input
-    id: environment
+    id: miljø
     attributes:
-      label: API Environment
-      description: Specify the environment where the issue was encountered (e.g., AT22, TT02, PROD).
-      placeholder: ex. Production
+      label: API Miljø
+      description: Spesifiser hvilket miljø problemet ble oppdaget i (f.eks., AT22, TT02, PROD).
+      placeholder: f.eks. Produksjon
